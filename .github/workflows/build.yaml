@@ -37,7 +37,12 @@ jobs:
         stats_line="$current_datetime | Repos: $repos | Stars: $stars | Followers: $followers | Contributions: $contributions"
         
         # Update README.md with the new stats
-        sed -i '/^<!--START_SECTION:github_stats-->/,/^<!--END_SECTION:github_stats-->/c\<!--START_SECTION:github_stats-->\n'"$stats_line"'\n<!--END_SECTION:github_stats-->' README.md
+        awk -v stats_line="$stats_line" 'BEGIN{found=0} \
+        /^<!--START_SECTION:github_stats-->/{print;print stats_line;found=1;next} \
+        /^<!--END_SECTION:github_stats-->/{found=0} \
+        !found' README.md > README_TEMP.md
+
+        mv README_TEMP.md README.md
 
     - name: Commit Changes
       run: |
