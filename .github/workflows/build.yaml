@@ -52,6 +52,6 @@ jobs:
         git commit -m "update readme"
 
     - name: Push Changes
-      uses: actions/checkout@v2
+      uses: ad-m/github-push-action@v0.6.0
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
