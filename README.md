@@ -7,4 +7,4 @@ professional experiences:
 
 currently trying:
 
-[![Go](https://img.shields.io/badge/golang-00ADD8.svg?&logo=go&logoColor=white)](#) [![Rust](https://img.shields.io/badge/Rust-%23000000.svg?e&logo=rust&logoColor=white)](#)
+[![Rust](https://img.shields.io/badge/Rust-%23000000.svg?e&logo=rust&logoColor=white)](#)
