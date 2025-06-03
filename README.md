@@ -1,5 +1,5 @@
 ## welcome to my basement
-a self taught programmer, currently a web developer migrating to low-level development.
+a self taught programmer
 
 professional experiences:
 
